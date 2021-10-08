@@ -40,6 +40,14 @@ export default function Resta() {
     setTotal(null);
   };
 
+  const clean = () => {
+    setErrorMessage('');
+    setTotal(null);
+    setNumero1('');
+    setNumero2('');
+    this.firsttextInput.focus();
+  };
+
   return (
     <>
       <View style={styles.viewForm}>
@@ -48,7 +56,11 @@ export default function Resta() {
           <TextInput
             placeholder="Ingresa el primer número"
             keyboardType="decimal-pad"
+            value={numero1}
             style={styles.input}
+            ref={(input) => {
+              this.firsttextInput = input;
+            }}
             onChange={(e) => setNumero1(e.nativeEvent.text)}
           />
 
@@ -56,12 +68,20 @@ export default function Resta() {
           <TextInput
             placeholder="Ingresa el segundo número"
             keyboardType="decimal-pad"
+            value={numero2}
             style={[styles.input, styles.inputPercentage]}
             onChange={(e) => setNumero2(e.nativeEvent.text)}
           />
         </View>
         <View style={styles.boton}>
           <Button onPress={restar} title=" Restar" />
+        </View>
+        <View style={styles.boton}>
+          <Button
+            buttonStyle={{ backgroundColor: 'red' }}
+            onPress={clean}
+            title=" Limpiar"
+          />
         </View>
       </View>
       <Resultado total={total} errorMessage={errorMessage} />
@@ -72,7 +92,7 @@ export default function Resta() {
 const styles = StyleSheet.create({
   viewForm: {
     position: 'absolute',
-    top: 40,
+    top: 70,
     width: '100%',
     paddingHorizontal: 50,
     backgroundColor: colors.PRIMARY_COLOR_DARK,
