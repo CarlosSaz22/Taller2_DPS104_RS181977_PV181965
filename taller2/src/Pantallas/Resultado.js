@@ -4,7 +4,7 @@ export default function Result(props) {
   const { total, errorMessage } = props;
   return (
     <View style={styles.content}>
-      {total && (
+      {total &&(
         <View style={styles.boxResult}>
           <Text style={styles.title}>Resultado : {total}</Text>
         </View>

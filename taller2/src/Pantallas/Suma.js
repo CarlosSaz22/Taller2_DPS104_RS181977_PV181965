@@ -34,7 +34,11 @@ export default function Suma() {
       let floatNumero1 = parseFloat(numero1);
       let floatNumero2 = parseFloat(numero2);
       const suma = floatNumero1 + floatNumero2;
-      setTotal(suma);
+      if (suma == 0) {
+        setTotal('0');
+      } else {
+        setTotal(suma);
+      }
     }
   };
   const reset = () => {

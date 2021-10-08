@@ -32,7 +32,12 @@ export default function Resta() {
       let floatNumero1 = parseFloat(numero1);
       let floatNumero2 = parseFloat(numero2);
       const resta = floatNumero1 - floatNumero2;
-      setTotal(resta);
+       if (resta == 0) {
+        setTotal('0');
+      } else {
+        setTotal(resta);
+      }
+     
     }
   };
   const reset = () => {
