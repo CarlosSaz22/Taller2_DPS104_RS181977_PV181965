@@ -5,5 +5,6 @@ Carlos José Ruiz Saz RS181977
 <br>
 Erick Alberto Pineda Valle PV181965
 <br>
-Enlaces de expo
+Enlace de expo
 <br>
+https://snack.expo.dev/@rs181977_pb181965/taller2
