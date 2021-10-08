@@ -27,7 +27,7 @@ function DataResult(props) {
 const styles = StyleSheet.create({
   content: {
     position: 'relative',
-    marginTop: 250,
+    marginTop: 300,
     marginHorizontal: 40,
   },
   boxResult: {
@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
     color: '#f00',
     fontWeight: 'bold',
     fontSize: 20,
+    marginTop:30
   },
 });
