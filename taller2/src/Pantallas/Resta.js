@@ -5,6 +5,7 @@ import colors from '../utils/colors';
 import { Button } from 'react-native-elements';
 import Resultado from './Resultado';
 export default function Resta() {
+  
   const [numero1, setNumero1] = useState('');
   const [numero2, setNumero2] = useState('');
   const [total, setTotal] = useState(null);
