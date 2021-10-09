@@ -9,6 +9,7 @@ import Factorial from '../Pantallas/Factorial';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
+
 export default function Navigation() {
   return (
     <Tab.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
@@ -109,6 +110,7 @@ export default function Navigation() {
           ),
         }}
       />
+      
     </Tab.Navigator>
   );
 }

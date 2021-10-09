@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
 export default function Result(props) {
+
   const { total, errorMessage } = props;
   return (
     <View style={styles.content}>
@@ -15,6 +17,7 @@ export default function Result(props) {
     </View>
   );
 }
+
 function DataResult(props) {
   const { title, value } = props;
   return (

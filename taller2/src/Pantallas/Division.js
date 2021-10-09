@@ -5,7 +5,6 @@ import colors from '../utils/colors';
 import { Button } from 'react-native-elements';
 import Resultado from './Resultado';
 
-
 export default function Division() {
   
   const [numero1, setNumero1] = useState('');
@@ -18,7 +17,7 @@ export default function Division() {
     if (!numero1 || !numero2) reset();
   }, [numero1, numero2]);
 
-  const restar = () => {
+  const dividir = () => {
     reset();
 
     if (!numero1.trim()) {
@@ -88,8 +87,9 @@ export default function Division() {
             onChange={(e) => setNumero2(e.nativeEvent.text)}
           />
         </View>
+        
         <View style={styles.boton}>
-          <Button onPress={restar} title="Dividir" />
+          <Button onPress={dividir} title="Dividir" />
         </View>
         <View style={styles.boton}>
           <Button

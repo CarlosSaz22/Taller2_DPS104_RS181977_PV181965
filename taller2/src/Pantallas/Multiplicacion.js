@@ -7,7 +7,7 @@ import Resultado from './Resultado';
 
 export default function Multiplicacion() {
  
-   const [numero1, setNumero1] = useState('');
+  const [numero1, setNumero1] = useState('');
   const [numero2, setNumero2] = useState('');
   const [total, setTotal] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
@@ -17,7 +17,7 @@ export default function Multiplicacion() {
     if (!numero1 || !numero2) reset();
   }, [numero1, numero2]);
 
-  const restar = () => {
+  const multiplicar = () => {
     reset();
 
     if (!numero1.trim()) {
@@ -83,8 +83,9 @@ export default function Multiplicacion() {
             onChange={(e) => setNumero2(e.nativeEvent.text)}
           />
         </View>
+        
         <View style={styles.boton}>
-          <Button onPress={restar} title="Multiplicar" />
+          <Button onPress={multiplicar} title="Multiplicar" />
         </View>
         <View style={styles.boton}>
           <Button
